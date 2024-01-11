@@ -22,10 +22,13 @@ class CombatShoe(Shoe):
     def __init__(self, color, brand, militiaryBranch, jungleOrDesert):
         super().__init__(color, brand)
         self.militiaryBranch = militiaryBranch
-        self.jungleOrDesert = jungleOrDesert
+        if jungleOrDesert == "None":
+            self.jungleOrDesert=""
+        else:
+            self.jungleOrDesert = (f" {jungleOrDesert}-camo")
 
     def add_shoe(self, shoeType):
-        print(f"{shoeType.color} {shoeType.brand} {self.militiaryBranch.upper()} {self.jungleOrDesert}-camo combat boots added to store")
+        print(f"{shoeType.color} {shoeType.brand} {self.militiaryBranch.upper()}{self.jungleOrDesert} combat boots added to store")
 
 
 class Sandal(Shoe):
@@ -68,7 +71,7 @@ def main():
             color = input("Enter color of combat shoe: ").capitalize()
             brand = input("Enter brand of shoe: ").capitalize()
             military_branch = input("Which branch does this belong to?(USAF/USMC/USN/USCG/USAR): ").capitalize()
-            jd = input("Does it have Jungle or Desert camouflage? (Jungle/Desert): ").capitalize()
+            jd = input("Does it have Jungle or Desert camouflage? (Jungle/Desert/None): ").capitalize()
             combat_shoe = CombatShoe(color, brand, military_branch, jd)
             combat_shoe.add_shoe(combat_shoe)
         
