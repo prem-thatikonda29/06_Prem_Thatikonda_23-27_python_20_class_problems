@@ -42,7 +42,7 @@ class Sandal(Shoe):
 
 
 def main():
-    print("----WELCOME TO THE SHOE-STOP(Admin Side)----")
+    print("----WELCOME TO THE SHOE-STOP----")
 
     while True:
         print("\n\n1)Regular Shoes")
