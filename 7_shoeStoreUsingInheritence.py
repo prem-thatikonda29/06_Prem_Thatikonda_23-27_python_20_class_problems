@@ -25,7 +25,7 @@ class CombatShoe(Shoe):
         self.jungleOrDesert = jungleOrDesert
 
     def add_shoe(self, shoeType):
-        print(f"{shoeType.color} {shoeType.brand} {self.militiaryBranch} {self.jungleOrDesert}-camo combat boots added to store")
+        print(f"{shoeType.color} {shoeType.brand} {self.militiaryBranch.upper()} {self.jungleOrDesert}-camo combat boots added to store")
 
 
 class Sandal(Shoe):
